@@ -9,4 +9,5 @@ def send_fruits(request: str):
         {"name": "Kirsche", "gewicht": 10, "farbe": "Rot"},
         {"name": "Ananas", "gewicht": 1000, "farbe": "Gelb"},
     ]
-    return JsonResponse(fruits)
+    # Hier passiert der Fehler ohne safe=False
+    return JsonResponse(fruits, safe=False)

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "corsheaders",
     "tech_gadgets",
+    "fruit_app",
 ]
 
 MIDDLEWARE = [

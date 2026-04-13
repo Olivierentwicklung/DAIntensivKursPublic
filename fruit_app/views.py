@@ -1,7 +1,5 @@
 from django.http import JsonResponse
 
-# Create your views here.
-
 
 def send_fruits(request: str):
     fruits: list[dict[str, str | int]] = [

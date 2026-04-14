@@ -1,4 +1,4 @@
-{% extends 'fruit_app/base.html'%}
+{% extends 'fruit_app/base.html'%}{% load static %}
 <div>
   {% block content %}
   <div class="fruit-page">
@@ -12,7 +12,7 @@
           <li class="fruit-item">
             <img
               class="fruit-image"
-              src="{{ fruit.img }}"
+              src="{% static fruit.img %}"
               alt="{{ fruit.name }}"
             />
             <div class="fruit-details">
@@ -34,7 +34,7 @@
           <li class="fruit-item">
             <img
               class="fruit-image"
-              src="{{ fruit.img }}"
+              src="{% static fruit.img  %}"
               alt="{{ fruit.name }}"
             />
             <div class="fruit-details">

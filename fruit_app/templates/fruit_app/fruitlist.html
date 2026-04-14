@@ -1,18 +1,36 @@
 {% extends 'fruit_app/base.html'%}
 <div>
   {% block content %}
-  <h1>This is my fruit List</h1>
-  <ul>
-    {% for fruit in fruits %}
-    <li>
-      <strong>{{fruit.name}}:</strong> Gewicht - {{fruit.gewicht}}g, Farbe -
-      {{fruit.farbe}}
-      <br />
-      <img src="{{fruit.img}}" alt="{{fruit.name}}" width="100" height="80" />
-    </li>
-    {% endfor %}
-  </ul>
-  <a href="http://127.0.0.1:8000/fruits/list/info"> Go to Info</a>
+  <div>
+    <ul>
+      <h1>Bestellt:</h1>
+      {% for fruit in fruits %} {% if fruit.is_ordered %}
+
+      <li>
+        <strong>{{fruit.name}}:</strong> Gewicht - {{fruit.gewicht}}g, Farbe -
+        {{fruit.farbe}}
+        <br />
+        <img src="{{fruit.img}}" alt="{{fruit.name}}" width="100" height="80" />
+      </li>
+      {% endif %} {% endfor %}
+    </ul>
+  </div>
+  <div>
+    <ul>
+      <h1>Nicht Bestellt:</h1>
+      {% for fruit in fruits %} {% if not fruit.is_ordered %}
+
+      <li>
+        <strong>{{fruit.name}}:</strong> Gewicht - {{fruit.gewicht}}g, Farbe -
+        {{fruit.farbe}}
+        <br />
+        <img src="{{fruit.img}}" alt="{{fruit.name}}" width="100" height="80" />
+      </li>
+      {% endif %} {% endfor %}
+    </ul>
+  </div>
+
+  <div><a href="http://127.0.0.1:8000/fruits/list/info"> Go to Info</a></div>
 
   {% endblock %}
 </div>

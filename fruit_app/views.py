@@ -25,3 +25,14 @@ def send_fruits_template(request: HttpRequest | None):
     context: dict[str, list[dict[str, str | int]]] = {"fruits": fruits}
     # Hier passiert der Fehler ohne safe=False
     return render(request, "fruit_app/fruitlist.html", context)
+
+
+def fruit_info(request: HttpRequest | None):
+    fruits: list[dict[str, str | int]] = [
+        {"name": "Apfel", "gewicht": 150, "farbe": "Rot"},
+        {"name": "Banane", "gewicht": 120, "farbe": "Gelb"},
+        {"name": "Orange", "gewicht": 200, "farbe": "Orange"},
+        {"name": "Kirsche", "gewicht": 10, "farbe": "Rot"},
+        {"name": "Ananas", "gewicht": 1000, "farbe": "Gelb"},
+    ]
+    return render(request, "fruit_app/info.html", fruits[0])

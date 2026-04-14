@@ -1,14 +1,16 @@
 {% extends 'fruit_app/base.html'%}
+<div>
+  {% block content %}
+  <h1>This is my fruit List</h1>
+  <ul>
+    {% for fruit in fruits %}
+    <li>
+      <strong>{{fruit.name}}:</strong> Gewicht - {{fruit.gewicht}}g, Farbe -
+      {{fruit.farbe}}
+    </li>
+    {% endfor %}
+  </ul>
+  <a href="http://127.0.0.1:8000/fruits/list/info"> Go to Info</a>
 
-<h1>This is my fruit List</h1>
-{% block content %}
-<ul>
-  {% for fruit in fruits %}
-  <li>
-    <strong>{{fruit.name}}:</strong> Gewicht - {{fruit.gewicht}}g, Farbe -
-    {{fruit.farbe}}
-  </li>
-  {% endfor %}
-</ul>
-
-{% endblock %}
+  {% endblock %}
+</div>

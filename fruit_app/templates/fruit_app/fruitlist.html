@@ -1,36 +1,61 @@
 {% extends 'fruit_app/base.html'%}
 <div>
   {% block content %}
-  <div>
-    <ul>
-      <h1>Bestellt:</h1>
-      {% for fruit in fruits %} {% if fruit.is_ordered %}
+  <div class="fruit-page">
+    <h1 class="fruit-title">Früchte Übersicht</h1>
 
-      <li>
-        <strong>{{fruit.name}}:</strong> Gewicht - {{fruit.gewicht}}g, Farbe -
-        {{fruit.farbe}}
-        <br />
-        <img src="{{fruit.img}}" alt="{{fruit.name}}" width="100" height="80" />
-      </li>
-      {% endif %} {% endfor %}
-    </ul>
+    <div class="fruit-sections">
+      <div class="fruit-box">
+        <h2>Bestellt</h2>
+        <ul class="fruit-list">
+          {% for fruit in fruits %} {% if fruit.is_ordered %}
+          <li class="fruit-item">
+            <img
+              class="fruit-image"
+              src="{{ fruit.img }}"
+              alt="{{ fruit.name }}"
+            />
+            <div class="fruit-details">
+              <strong>{{ fruit.name }}</strong>
+              <div class="fruit-meta">
+                Gewicht: {{ fruit.gewicht }}g<br />
+                Farbe: {{ fruit.farbe }}
+              </div>
+            </div>
+          </li>
+          {% endif %} {% endfor %}
+        </ul>
+      </div>
+
+      <div class="fruit-box">
+        <h2>Nicht Bestellt</h2>
+        <ul class="fruit-list">
+          {% for fruit in fruits %} {% if not fruit.is_ordered %}
+          <li class="fruit-item">
+            <img
+              class="fruit-image"
+              src="{{ fruit.img }}"
+              alt="{{ fruit.name }}"
+            />
+            <div class="fruit-details">
+              <strong>{{ fruit.name }}</strong>
+              <div class="fruit-meta">
+                Gewicht: {{ fruit.gewicht }}g<br />
+                Farbe: {{ fruit.farbe }}
+              </div>
+            </div>
+          </li>
+          {% endif %} {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-link-wrapper">
+      <a class="info-link" href="http://127.0.0.1:8000/fruits/list/info"
+        >Go to Information</a
+      >
+    </div>
   </div>
-  <div>
-    <ul>
-      <h1>Nicht Bestellt:</h1>
-      {% for fruit in fruits %} {% if not fruit.is_ordered %}
-
-      <li>
-        <strong>{{fruit.name}}:</strong> Gewicht - {{fruit.gewicht}}g, Farbe -
-        {{fruit.farbe}}
-        <br />
-        <img src="{{fruit.img}}" alt="{{fruit.name}}" width="100" height="80" />
-      </li>
-      {% endif %} {% endfor %}
-    </ul>
-  </div>
-
-  <div><a href="http://127.0.0.1:8000/fruits/list/info"> Go to Info</a></div>
 
   {% endblock %}
 </div>

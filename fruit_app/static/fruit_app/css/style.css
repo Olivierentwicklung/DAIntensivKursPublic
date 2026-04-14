@@ -266,3 +266,24 @@
     grid-template-columns: 1fr;
   }
 }
+
+.vitamins {
+  margin-top: 10px;
+}
+
+.vitamins span {
+  display: inline-block;
+  background: #f1f5f9;
+  color: #333;
+  padding: 6px 12px;
+  margin: 4px 4px 0 0;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.vitamins span:hover {
+  background: #9e0c0c;
+  color: white;
+}

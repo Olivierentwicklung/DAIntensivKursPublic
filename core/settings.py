@@ -68,6 +68,7 @@ TEMPLATES = [
         "DIRS": [
             BASE_DIR / "core/templates",
             BASE_DIR / "tech_gadgets/templates",
+            BASE_DIR / "fruit_app/templates",
         ],
         "APP_DIRS": True,
         "OPTIONS": {

@@ -1,0 +1,61 @@
+{% extends 'fruit_app/base.html'%}{% load static %}
+<div>
+  {% block content %}
+  <div class="fruit-page">
+    <h1 class="fruit-title">Früchte Übersicht</h1>
+
+    <div class="fruit-sections">
+      <div class="fruit-box">
+        <h2>Bestellt</h2>
+        <ul class="fruit-list">
+          {% for fruit in fruits %} {% if fruit.is_ordered %}
+          <li class="fruit-item">
+            <img
+              class="fruit-image"
+              src="{% static fruit.img %}"
+              alt="{{ fruit.name }}"
+            />
+            <div class="fruit-details">
+              <strong>{{ fruit.name }}</strong>
+              <div class="fruit-meta">
+                Gewicht: {{ fruit.gewicht }}g<br />
+                Farbe: {{ fruit.farbe }}
+              </div>
+            </div>
+          </li>
+          {% endif %} {% endfor %}
+        </ul>
+      </div>
+
+      <div class="fruit-box">
+        <h2>Nicht Bestellt</h2>
+        <ul class="fruit-list">
+          {% for fruit in fruits %} {% if not fruit.is_ordered %}
+          <li class="fruit-item">
+            <img
+              class="fruit-image"
+              src="{% static fruit.img  %}"
+              alt="{{ fruit.name }}"
+            />
+            <div class="fruit-details">
+              <strong>{{ fruit.name }}</strong>
+              <div class="fruit-meta">
+                Gewicht: {{ fruit.gewicht }}g<br />
+                Farbe: {{ fruit.farbe }}
+              </div>
+            </div>
+          </li>
+          {% endif %} {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-link-wrapper">
+      <a class="info-link" href="http://127.0.0.1:8000/fruits/list/info"
+        >Go to Information</a
+      >
+    </div>
+  </div>
+
+  {% endblock %}
+</div>

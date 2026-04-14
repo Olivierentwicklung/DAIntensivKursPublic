@@ -1,0 +1,49 @@
+{% extends 'fruit_app/base.html'%} {% load static %}
+<div>
+  {% block infos %}
+  <div class="info-section">
+    <div class="info-header">
+      <h2>Why Fruits Matter 🍎</h2>
+      <p>
+        Fruits are more than just delicious snacks — they are essential for a
+        healthy and balanced life.
+      </p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <img src="{% static 'fruit_app/img/apfel.webp' %}" alt="Health" />
+        <h3>Healthy Lifestyle</h3>
+        <p>
+          Fruits are packed with vitamins, fiber, and antioxidants that help
+          your body stay strong and energized every day.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <img src="{% static 'fruit_app/img/banane.jpg' %}" alt="Energy" />
+        <h3>Natural Energy</h3>
+        <p>
+          Need a quick boost? Fruits provide natural sugars that give you
+          instant energy without processed ingredients.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <img src="{% static 'fruit_app/img/orange.jpg' %}" alt="Variety" />
+        <h3>Endless Variety</h3>
+        <p>
+          From sweet to sour, soft to crunchy — fruits come in endless varieties
+          that make eating healthy exciting and enjoyable.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="info-link-wrapper">
+    <a class="info-link" href="http://127.0.0.1:8000/fruits/list/"
+      >Go to Home</a
+    >
+  </div>
+
+  {% endblock %}
+</div>

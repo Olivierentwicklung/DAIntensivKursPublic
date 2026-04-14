@@ -1,0 +1,265 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #e6fffa, #f0fff4);
+  border-radius: 20px;
+  margin: 30px auto;
+  max-width: 1100px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #22543d;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  background: #38a169;
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.hero-btn:hover {
+  background: #2f855a;
+  transform: scale(1.05);
+}
+
+.hero-image img {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.fruit-page {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #2d3748;
+}
+
+.fruit-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #2f855a;
+}
+
+.fruit-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.fruit-box {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.fruit-box h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #276749;
+  border-bottom: 2px solid #c6f6d5;
+  padding-bottom: 10px;
+}
+
+.fruit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fruit-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #f7fafc;
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 14px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.fruit-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.fruit-image {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #c6f6d5;
+  background: #fff;
+}
+
+.fruit-details {
+  flex: 1;
+}
+
+.fruit-details strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #22543d;
+  margin-bottom: 6px;
+}
+
+.fruit-meta {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+.info-link-wrapper {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.info-link {
+  display: inline-block;
+  text-decoration: none;
+  background: #38a169;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: bold;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.info-link:hover {
+  background: #2f855a;
+  transform: scale(1.05);
+}
+
+.empty-text {
+  color: #718096;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .fruit-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .fruit-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .fruit-image {
+    width: 140px;
+    height: 110px;
+  }
+}
+
+.info-section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.info-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.info-header h2 {
+  font-size: 2.2rem;
+  color: #22543d;
+  margin-bottom: 10px;
+}
+
+.info-header p {
+  color: #4a5568;
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.info-card {
+  background: #f7fafc;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  transition: 0.25s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.info-card img {
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+.info-card h3 {
+  margin-bottom: 10px;
+  color: #2f855a;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,177 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #fff5f5, #f0fff4, #ebf8ff);
+        padding: 20px;
+        overflow: hidden;
+      }
+
+      .error-container {
+        max-width: 800px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 24px;
+        padding: 40px 30px;
+        text-align: center;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+        position: relative;
+      }
+
+      .emoji-top {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        animation: float 2s ease-in-out infinite;
+      }
+
+      .error-code {
+        font-size: 6rem;
+        font-weight: 900;
+        color: #e53e3e;
+        line-height: 1;
+        margin-bottom: 10px;
+        text-shadow: 3px 3px 0 #fed7d7;
+      }
+
+      .error-title {
+        font-size: 2rem;
+        color: #2d3748;
+        margin-bottom: 15px;
+      }
+
+      .error-text {
+        font-size: 1.1rem;
+        color: #4a5568;
+        line-height: 1.7;
+        max-width: 600px;
+        margin: 0 auto 25px;
+      }
+
+      .error-gif {
+        width: 280px;
+        max-width: 100%;
+        border-radius: 18px;
+        margin: 20px 0 25px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      }
+
+      .home-btn {
+        display: inline-block;
+        text-decoration: none;
+        background: #38a169;
+        color: white;
+        padding: 14px 28px;
+        border-radius: 999px;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: 0.25s ease;
+        box-shadow: 0 6px 15px rgba(56, 161, 105, 0.25);
+      }
+
+      .home-btn:hover {
+        background: #2f855a;
+        transform: translateY(-2px) scale(1.04);
+      }
+
+      .fruit-decor {
+        position: absolute;
+        font-size: 2rem;
+        opacity: 0.18;
+      }
+
+      .fruit-1 {
+        top: 20px;
+        left: 25px;
+      }
+      .fruit-2 {
+        top: 30px;
+        right: 35px;
+      }
+      .fruit-3 {
+        bottom: 25px;
+        left: 35px;
+      }
+      .fruit-4 {
+        bottom: 20px;
+        right: 30px;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .error-code {
+          font-size: 4.5rem;
+        }
+
+        .error-title {
+          font-size: 1.5rem;
+        }
+
+        .error-text {
+          font-size: 1rem;
+        }
+
+        .error-container {
+          padding: 30px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error-container">
+      <div class="fruit-decor fruit-1">🍎</div>
+      <div class="fruit-decor fruit-2">🍌</div>
+      <div class="fruit-decor fruit-3">🍇</div>
+      <div class="fruit-decor fruit-4">🍉</div>
+
+      <div class="emoji-top">😵🍍🚫</div>
+
+      <div class="error-code">404</div>
+      <h1 class="error-title">Oops... this fruit rolled away.</h1>
+
+      <p class="error-text">
+        The page you are looking for seems to be missing from the basket. 🍓
+        Maybe the link is broken, the page was moved, or our little banana got
+        lost on the way. 🍌
+      </p>
+
+      <img
+        class="error-gif"
+        src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHU2eW1nNmV5bXRmZXA3cTUwYXZpdjFseW11cmRtMHF0ZXFsZWFxdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gX3u0staej6wAnRlcP/giphy.gif"
+        alt="Funny fruit gif"
+      />
+
+      <p class="error-text">
+        Don’t worry — fresh pages are still waiting for you. 🍊✨
+      </p>
+
+      <a class="home-btn" href="/fruits/list/">Take Me Home 🏡</a>
+    </div>
+  </body>
+</html>

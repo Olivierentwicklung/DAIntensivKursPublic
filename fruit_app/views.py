@@ -8,17 +8,20 @@ def send_fruits(request: HttpRequest):
 
 
 def send_fruits_template(request: HttpRequest | None):
-    context: dict[
-        str, list[dict[str, str | int | bool | dict[str, str | list[str]]]]
-    ] = {"fruits": fruits}
+    context = transform_list_into_dict("fruits", fruits)
     return render(request, "fruit_app/fruitlist.html", context)
 
 
 def fruit_info(request: HttpRequest | None):
-    context: dict[
-        str, list[dict[str, str | int | bool | dict[str, str | list[str]]]]
-    ] = {"fruits": fruits}
+    context = transform_list_into_dict("fruits", fruits)
     return render(request, "fruit_app/info.html", context)
+
+
+def transform_list_into_dict(
+    key: str,
+    list: list[dict[str, str | int | bool | dict[str, str | list[str]]]],
+) -> dict[str, list[dict[str, str | int | bool | dict[str, str | list[str]]]]]:
+    return {key: list}
 
 
 fruits: list[dict[str, str | int | bool | dict[str, str | list[str]]]] = [

@@ -19,11 +19,11 @@ The goal of these projects is to explore different ways of building and consumin
 
 ### 🔹 Tech Gadgets App
 
-Displays a list of gadgets and their manufacturers using **Django Templates**.
+Displays a list of gadgets and their manufacturers using **Django Templates** and a **dummy-data JSON**.
 
 **Key concepts:**
 
-- Django models & relationships
+- Django views & urls
 - Template rendering
 - Server-side rendering
 
@@ -31,7 +31,7 @@ Displays a list of gadgets and their manufacturers using **Django Templates**.
 
 ![Demo](z_screenshots/Module_05_aufgabe_as_landingpage_1_Olivier_Lowe.png)
 
-➡️ [View detailed README](tech_gadgets\README.md)
+➡️ [View detailed README](tech_gadgets/README.md)
 
 ---
 
@@ -55,12 +55,16 @@ Provides a **JSON API** built with Django, consumed by an external frontend usin
 
 ### 🔹 Fruit App 2 (Django Templates)
 
-Displays a list of fruits using **Django Templates**.
+Displays a list of fruits using **Django Templates** and a **list of dictionnaries**.
 
 **Key concepts:**
 
-- Server-side rendering
+- Django views & urls
+- Template rendering
 - Reusable templates
+- Navigation between templates
+- Main 404 template
+- Server-side rendering
 
 **🎥 Demo:**
 
@@ -73,10 +77,10 @@ Displays a list of fruits using **Django Templates**.
 ## ⚙️ Setup
 
 ```bash
-git clone <your-repo-url>
-cd <project-folder>
+git clone https://github.com/Olivierentwicklung/DAIntensivKursPublic.git
 
-python -m venv venv
+
+python -m venv .venv
 .venv\Scripts\activate  # on Windows
 
 pip install -r requirements.txt

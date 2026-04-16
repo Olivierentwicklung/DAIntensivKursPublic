@@ -31,7 +31,7 @@ Displays a list of gadgets and their manufacturers using **Django Templates** an
 
 ![Demo](z_screenshots/Module_05_aufgabe_as_landingpage_1_Olivier_Lowe.png)
 
-➡️ [View detailed README](tech_gadgets\README.md)
+➡️ [View detailed README](tech_gadgets/README.md)
 
 ---
 

@@ -1,9 +1,12 @@
-import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ChatMessage } from './models/chat_message.model';
 import { getAllChat } from './models/chat_seed';
 import { DatePipe } from '@angular/common';
+import { ApiService } from './services/api-services';
+import { rxResource, toObservable, toSignal } from '@angular/core/rxjs-interop';
+import { startWith, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -13,28 +16,48 @@ import { DatePipe } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class App {
+  private readonly apiService = inject(ApiService);
   // form fields
   name = signal('');
   message = signal('');
 
-  chats = signal<ChatMessage[]>(getAllChat());
+  reloadKey = signal(0);
+
+  // chats = signal<ChatMessage[]>(getAllChat());
+  chatsResource = rxResource({
+    params: () => ({
+      reloadKey: this.reloadKey(),
+    }),
+    stream: () => this.apiService.getAllChat(),
+    defaultValue: [] as ChatMessage[],
+  });
+
+  chats = computed(() => this.chatsResource.value());
+  isLoading = computed(() => this.chatsResource.isLoading());
+  error = computed(() => this.chatsResource.error());
 
   isFormInvalid = computed(() => {
     return !this.name().trim() || !this.message().trim();
   });
 
-  protected sendMessage(): void {
-    if (this.isFormInvalid()) return;
-
-    const newMessage: ChatMessage = {
+  protected onSendMessage(): void {
+    const payload = {
       name: this.name().trim(),
       message: this.message().trim(),
-      created_at: new Date().toISOString().slice(0, 10),
     };
 
-    this.chats.update((current) => [...current, newMessage]);
-    this.name.set('');
-    this.message.set('');
+    if (!payload.name || !payload.message) return;
+
+    this.apiService.sendMessage(payload).subscribe({
+      next: () => {
+        this.name.set('');
+        this.message.set('');
+        this.reloadKey.update((value) => value + 1);
+      },
+      error: (error) => {
+        console.error('Error while sending message:', error);
+      },
+    });
   }
 
   protected getAvatarStyle(name: string): { [key: string]: string } {

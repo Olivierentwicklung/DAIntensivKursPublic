@@ -29,7 +29,7 @@ def chat_view(request: HttpRequest):
 
                 message_to_send.save()
 
-            return JsonResponse({"response": "Das war was"})
+            return JsonResponse(data, safe=False)
 
         except:
-            return JsonResponse({"response": "Das war wohl nix"})
+            return JsonResponse({"response": "ERROR"})

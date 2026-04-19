@@ -2,7 +2,6 @@
 import json
 from datetime import datetime, timezone
 
-from django.core import serializers
 from django.http import HttpRequest, JsonResponse
 
 from chat_app.models import Chat
@@ -12,9 +11,8 @@ from chat_app.models import Chat
 
 def chat_view(request: HttpRequest):
     if request.method == "GET":
-        allChats = Chat.objects.all()
-        data = serializers.serialize("json", allChats)
-        return JsonResponse(data, safe=False)
+        allChats = Chat.objects.all().values("id", "name", "message", "created_at")
+        return JsonResponse(list(allChats), safe=False)
 
     elif request.method == "POST":
         try:
@@ -29,7 +27,7 @@ def chat_view(request: HttpRequest):
 
                 message_to_send.save()
 
-            return JsonResponse({"response": "Das war was"})
+            return JsonResponse(data, safe=False)
 
         except:
-            return JsonResponse({"response": "Das war wohl nix"})
+            return JsonResponse({"response": "ERROR"})

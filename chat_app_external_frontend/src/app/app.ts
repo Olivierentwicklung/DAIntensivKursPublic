@@ -32,7 +32,7 @@ export class App {
       created_at: new Date().toISOString().slice(0, 10),
     };
 
-    this.chats.update((current) => [newMessage, ...current]);
+    this.chats.update((current) => [...current, newMessage]);
     this.name.set('');
     this.message.set('');
   }

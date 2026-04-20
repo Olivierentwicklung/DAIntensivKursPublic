@@ -14,4 +14,4 @@ Provides a **JSON API** built with Django, consumed by an external frontend usin
 
 ---
 
-➡️ [View Main README](/README.md)
+➡️ [View Main README](/README.md#-fruit-app-1-api--external-frontend)

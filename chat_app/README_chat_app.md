@@ -19,4 +19,4 @@ Provides a **JSON API** built with Django, consumed by an external frontend usin
 
 ---
 
-➡️ [View Main README](/README.md)
+➡️ [View Main README](/README.md#-chat-app-django-api--external-frontend-angular--postman)

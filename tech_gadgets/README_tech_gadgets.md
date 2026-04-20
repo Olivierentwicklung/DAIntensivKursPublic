@@ -14,4 +14,4 @@ Displays a list of gadgets and their manufacturers using **Django Templates** an
 
 ---
 
-➡️ [View Main README](/README.md)
+➡️ [View Main README](/README.md#-tech-gadgets-app)

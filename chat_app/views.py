@@ -23,7 +23,7 @@ def chat_view(request: HttpRequest):
                 created_date = datetime.now(timezone.utc)
                 message_to_send = Chat(
                     name=data["name"].lower(),
-                    message=data["message"].lower(),
+                    message=data["message"],
                     created_at=created_date,
                 )
 

@@ -23,7 +23,6 @@ export class App {
 
   reloadKey = signal(0);
 
-  // chats = signal<ChatMessage[]>(getAllChat());
   chatsResource = rxResource({
     params: () => ({
       reloadKey: this.reloadKey(),

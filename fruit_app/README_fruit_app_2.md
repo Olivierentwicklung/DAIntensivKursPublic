@@ -17,4 +17,4 @@ Displays a list of fruits using **Django Templates** and a **list of dictionnari
 
 ---
 
-➡️ [View Main README](/README.md)
+➡️ [View Main README](/README.md#-fruit-app-2-django-templates)

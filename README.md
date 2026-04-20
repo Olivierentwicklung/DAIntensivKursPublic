@@ -74,9 +74,9 @@ Displays a list of fruits using **Django Templates** and a **list of dictionnari
 
 ---
 
-### 🔹 Chat App (Django API + External Frontend: Angular)
+### 🔹 Chat App (Django API + External Frontend: Angular + Postman)
 
-Provides a **JSON API** built with Django, consumed by an external frontend using Angular 21.
+Provides a **JSON API** built with Django, consumed by an external frontend using Angular 21 + Postman.
 
 **Key concepts:**
 

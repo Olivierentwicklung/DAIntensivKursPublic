@@ -97,6 +97,23 @@ Provides a **JSON API** built with Django, consumed by an external frontend usin
 
 ---
 
+### 🔹 Modeling a University System with Django
+
+Provides all **Class Models**.
+
+**Key concepts:**
+
+- Transform textual requirements into a relationship diagram
+- From the relationship diagram, implement the corresponding class models
+
+**🎥 Demo:**
+
+![Demo](z_screenshots/relationship_model.png)
+
+➡️ [View detailed README](chat_app/README_chat_app.md)
+
+---
+
 ## ⚙️ Setup
 
 ```bash

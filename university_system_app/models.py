@@ -42,3 +42,31 @@ class Semester(models.Model):
 
     def __str__(self):
         return f"Semester: {self.name} ({self.start_date} - {self.end_date})"
+
+
+class Kurs(models.Model):
+    title = models.CharField(max_length=150)
+    code = models.CharField(max_length=18)
+
+    # Professor 1:n Kurs
+    professor = models.ForeignKey(
+        Professor,
+        on_delete=models.CASCADE,
+        related_name="kurse",
+    )
+
+    # Semester 1:n Kurs
+    semester = models.ForeignKey(
+        Semester,
+        on_delete=models.CASCADE,
+        related_name="kurse",
+    )
+
+    # Student m:n Kurs
+    students = models.ManyToManyField(
+        Student,
+        related_name="kurse",
+    )
+
+    def __str__(self):
+        return f"{self.code} - {self.title}"

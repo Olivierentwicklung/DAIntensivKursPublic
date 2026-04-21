@@ -9,4 +9,18 @@ class Student(models.Model):
     matriculation_number = models.CharField(max_length=18)
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name} {self.matriculation_number}"
+        return f"{self.first_name} {self.last_name} ({self.matriculation_number})"
+
+
+class Studentenausweis(models.Model):
+    card_number = models.CharField(max_length=50)
+    issued_at = models.DateField()
+
+    student = models.OneToOneField(
+        Student,
+        on_delete=models.CASCADE,
+        related_name="studentenausweis",
+    )
+
+    def __str__(self):
+        return f"Ausweis {self.card_number} - {self.issued_at} - {self.student}"

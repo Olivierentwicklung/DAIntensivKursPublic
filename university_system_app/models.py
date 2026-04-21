@@ -33,3 +33,12 @@ class Professor(models.Model):
 
     def __str__(self):
         return f"Prof. {self.first_name} {self.last_name} ({self.employee_number})"
+
+
+class Semester(models.Model):
+    name = models.CharField(max_length=150)
+    start_date = models.DateField()
+    end_date = models.DateField()
+
+    def __str__(self):
+        return f"Semester: {self.name} ({self.start_date} - {self.end_date})"

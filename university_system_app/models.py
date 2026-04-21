@@ -16,6 +16,7 @@ class Studentenausweis(models.Model):
     card_number = models.CharField(max_length=50)
     issued_at = models.DateField()
 
+    # Student 1:1 Studentenausweis
     student = models.OneToOneField(
         Student,
         on_delete=models.CASCADE,
@@ -75,6 +76,7 @@ class Kurs(models.Model):
 class Kursbeschreibung(models.Model):
     description = models.TextField()
 
+    # Kurs 1:1 Kursbeschreibung
     kurs = models.OneToOneField(
         Kurs,
         on_delete=models.CASCADE,

@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "tech_gadgets",
     "fruit_app",
     "chat_app",
+    "university_system_app",
 ]
 
 MIDDLEWARE = [

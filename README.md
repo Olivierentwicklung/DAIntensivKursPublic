@@ -110,7 +110,7 @@ Provides all **Class Models**.
 
 ![Demo](z_screenshots/relationship_model.png)
 
-➡️ [View detailed README](chat_app/README_chat_app.md)
+➡️ [View detailed README](university_system_app/README_university_system_app.md)
 
 ---
 

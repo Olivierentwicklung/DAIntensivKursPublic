@@ -70,3 +70,16 @@ class Kurs(models.Model):
 
     def __str__(self):
         return f"{self.code} - {self.title}"
+
+
+class Kursbeschreibung(models.Model):
+    description = models.TextField()
+
+    kurs = models.OneToOneField(
+        Kurs,
+        on_delete=models.CASCADE,
+        related_name="kursbeschreibung",
+    )
+
+    def __str__(self):
+        return f"Beschreibung für {self.kurs}"

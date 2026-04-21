@@ -52,7 +52,9 @@ class Course(models.Model):
     # Professor 1:n Course
     professor = models.ForeignKey(
         Professor,
-        on_delete=models.CASCADE,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
         related_name="courses",
     )
 

@@ -6,6 +6,8 @@ Provides a **JSON API** built with Django, consumed by an external frontend usin
 
 - Displays a list of fruits
 
+---
+
 ## 🧪 Example Usage
 
 - Get the list of fruits

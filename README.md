@@ -55,7 +55,7 @@ Provides a **JSON API** built with Django, consumed by an external frontend usin
 
 ### 🔹 Fruit App 2 (Django Templates)
 
-Displays a list of fruits using **Django Templates** and a **list of dictionnaries**.
+Displays a list of fruits using **Django Templates** and a **list of dictionaries**.
 
 **Key concepts:**
 

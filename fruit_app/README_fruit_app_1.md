@@ -48,7 +48,13 @@ open with live server: fruit_app_external_frontend/index.html
 
 **🎥 Demo:**
 
-![Demo](../z_screenshots/fruit_app_1_Olivier_Lowe.png)
+- Backend
+
+  ![Demo](../z_screenshots/api-fruit-app-1.png)
+
+- Frontend
+
+  ![Demo](../z_screenshots/fruit_app_1_Olivier_Lowe.png)
 
 ## 🚀 Future Improvements
 

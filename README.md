@@ -12,6 +12,7 @@ The goal of these projects is to explore different ways of building and consumin
 - Django
 - HTML / CSS
 - JavaScript (Fetch API)
+- Angular
 
 ---
 

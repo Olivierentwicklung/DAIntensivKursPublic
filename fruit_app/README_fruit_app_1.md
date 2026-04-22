@@ -29,6 +29,7 @@ open with live server: fruit_app_external_frontend/index.html
 ## 🧠 What I Learned
 
 - Backend:
+  - How to get dummy data from a Global List Variable in `views.py`
   - How to use `HttpRequest` and `JsonResponse` in `views.py`
   - How to configure `CORS_ALLOWED_ORIGINS`
 

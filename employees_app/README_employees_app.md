@@ -52,4 +52,4 @@ In this exercise, i create filters in a Django app to display employee data base
 
 ---
 
-➡️ [View Main README](/README.md#-fruit-app-2-django-templates)
+➡️ [View Main README](/README.md#-staff-filter-app-django-templates)

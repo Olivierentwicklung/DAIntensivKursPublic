@@ -16,6 +16,7 @@ def employee_overview(request: HttpRequest):
     all_employees_salary_gt_3000 = all_employees.filter(salary__gt=3000)
 
     all_employees_salary_gte_5000 = all_employees.filter(salary__gte=5000)
+    count_all_employees_salary_gte_5000 = len(all_employees_salary_gte_5000)
 
     avg_salary_in_sales_team = all_employees.filter(department__name="Sales").aggregate(
         Avg("salary", default=0)
@@ -29,10 +30,12 @@ def employee_overview(request: HttpRequest):
         Q(department__name="HR")
     ).filter(hire_date__lt=date(2022, 1, 1))
 
-    print(all_employees)
-    print(all_employees_salary_gt_3000)
-    print(len(all_employees_salary_gte_5000))
-    print(avg_salary_in_sales_team_rounded_to_2_decimal_places)
-    print(not_hr_employees_with_special_hire_date)
+    context = {
+        "all_employees": all_employees,
+        "all_employees_salary_gt_3000": all_employees_salary_gt_3000,
+        "count_all_employees_salary_gte_5000": count_all_employees_salary_gte_5000,
+        "avg_salary_in_sales_team_rounded_to_2_decimal_places": avg_salary_in_sales_team_rounded_to_2_decimal_places,
+        "not_hr_employees_with_special_hire_date": not_hr_employees_with_special_hire_date,
+    }
 
-    return render(request, "employees_app/employee_list.html")
+    return render(request, "employees_app/employee_list.html", context)

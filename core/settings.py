@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "fruit_app",
     "chat_app",
     "university_system_app",
+    "employees_app",
 ]
 
 MIDDLEWARE = [

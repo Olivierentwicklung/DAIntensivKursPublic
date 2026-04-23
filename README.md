@@ -115,6 +115,24 @@ Provides all **Class Models**.
 
 ---
 
+### 🔹 Staff Filter App (Django Templates)
+
+In this exercise, you create filters in a Django app to display employee data based on specific criteria.
+
+**Key concepts:**
+
+- Django views & urls
+- Template rendering
+- Server-side rendering
+
+**🎥 Demo:**
+
+![Demo](z_screenshots/staff_filter_app.png)
+
+➡️ [View detailed README](employees_app/README_employees_app.md)
+
+---
+
 ## ⚙️ Setup
 
 ```bash

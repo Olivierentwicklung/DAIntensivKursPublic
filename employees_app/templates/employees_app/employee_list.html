@@ -49,7 +49,7 @@
           <li>
             <p>
               Name: {{ emp.name }} - Abteilung : {{ emp.department.name }} -
-              Gehalt : {{ emp.salary }}
+              Gehalt : {{ emp.salary }} €
             </p>
             {% endfor %}
           </li>
@@ -76,7 +76,7 @@
         Zeige das Ergebnis auf zwei Nachkommastellen gerundet an.
         <p>
           Average Salary:
-          {{avg_salary_in_sales_team_rounded_to_2_decimal_places}}
+          {{avg_salary_in_sales_team_rounded_to_2_decimal_places}} €
         </p>
       </li>
       <li>

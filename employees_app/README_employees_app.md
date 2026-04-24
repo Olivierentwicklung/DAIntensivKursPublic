@@ -12,6 +12,12 @@ In this exercise, i create filters in a Django app to display employee data base
 
 ## 🧪 Example Usage
 
+- Populate example db content
+
+  ```bash
+   In Terminal: python manage.py shell -c "exec(open('employees_app/populate.py').read())" # On Windows
+  ```
+
 - Get the app in Browser
 
   ```bash
@@ -23,12 +29,12 @@ In this exercise, i create filters in a Django app to display employee data base
 ## 🧠 What I Learned
 
 - How to use `.objects.select_related`
+- How to use `round()`
 - How to use `.filter`:
   - `__gt`
   - `__gte`
   - `Avg`
   - `Q`
-  - `round()`
 
 ---
 

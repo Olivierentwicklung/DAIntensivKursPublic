@@ -1,5 +1,5 @@
 from django.urls import include, path
-from rest_framework import routers
+from rest_framework import routers  # type: ignore
 
 from .views import (
     MarketsViewSet,
@@ -8,10 +8,10 @@ from .views import (
 )
 
 router = routers.SimpleRouter()
-router.register(r"markets", MarketsViewSet)
-router.register(r"sellers", SellersViewSet)
-router.register(r"products", ProductsViewSet)
+router.register(r"markets", MarketsViewSet)  # type: ignore
+router.register(r"sellers", SellersViewSet)  # type: ignore
+router.register(r"products", ProductsViewSet)  # type: ignore
 
 urlpatterns = [
-    path("", include(router.urls)),
+    path("", include(router.urls)),  # type: ignore
 ]

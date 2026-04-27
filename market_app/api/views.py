@@ -1,4 +1,4 @@
-from rest_framework import viewsets  # type: ignore
+from rest_framework import viewsets
 
 from market_app.models import Market, Product, Seller
 

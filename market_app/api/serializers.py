@@ -1,4 +1,4 @@
-from rest_framework import serializers  # type: ignore
+from rest_framework import serializers
 
 from market_app.models import Market, Product, Seller
 
@@ -17,19 +17,19 @@ class MarketSerializer(serializers.ModelSerializer):
 class MarketHyperlinkedModelSerializer(
     MarketSerializer, serializers.HyperlinkedModelSerializer
 ):
-    def __init__(self, *args, **kwargs):  # type: ignore
+    def __init__(self, *args, **kwargs):
         # Don't pass the 'fields' arg up to the superclass
-        fields = kwargs.pop("fields", None)  # type: ignore
+        fields = kwargs.pop("fields", None)
 
         # Instantiate the superclass normally
-        super().__init__(*args, **kwargs)  # type: ignore
+        super().__init__(*args, **kwargs)
 
         if fields is not None:
             # Drop any fields that are not specified in the `fields` argument.
-            allowed = set(fields)  # type: ignore
-            existing = set(self.fields)  # type: ignore
-            for field_name in existing - allowed:  # type: ignore
-                self.fields.pop(field_name)  # type: ignore
+            allowed = set(fields)
+            existing = set(self.fields)
+            for field_name in existing - allowed:
+                self.fields.pop(field_name)
 
     class Meta:  # type: ignore
         model = Market

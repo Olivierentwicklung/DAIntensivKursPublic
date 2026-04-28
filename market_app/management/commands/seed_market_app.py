@@ -4,6 +4,8 @@ from django.core.management.base import BaseCommand
 
 from market_app.models import Market, Product, Seller
 
+# in Terminal: python manage.py seed_market_app
+
 
 class Command(BaseCommand):
     help = "Seed database with dummy markets, sellers and products"

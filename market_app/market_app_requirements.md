@@ -28,12 +28,14 @@ You will build an application to manage:
     - location
     - description
     - net_worth
+    - image_url
 
 ### 👤 Seller
 
     - name
     - contact_info
     - markets
+    - image_url
 
 ➡ A seller can work in multiple markets
 
@@ -42,6 +44,7 @@ You will build an application to manage:
     - name
     - description
     - price
+    - image_url
     - market
     - seller
 

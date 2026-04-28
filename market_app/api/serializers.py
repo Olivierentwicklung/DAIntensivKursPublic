@@ -34,7 +34,15 @@ class MarketHyperlinkedModelSerializer(
     class Meta:  # type: ignore
         model = Market
         # exclude = []
-        fields = ["id", "url", "name", "location", "description", "net_worth"]
+        fields = [
+            "id",
+            "url",
+            "name",
+            "location",
+            "description",
+            "net_worth",
+            "image_url",
+        ]
 
 
 class SellerSerializer(serializers.ModelSerializer):
@@ -48,7 +56,15 @@ class SellerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Seller
-        fields = ["id", "name", "market_ids", "market_count", "markets", "contact_info"]
+        fields = [
+            "id",
+            "name",
+            "market_ids",
+            "market_count",
+            "markets",
+            "contact_info",
+            "image_url",
+        ]
 
     def get_market_count(self, obj):
         return obj.markets.count()
@@ -67,13 +83,22 @@ class SellerHyperlinkedModelSerializer(
             "market_count",
             "markets",
             "contact_info",
+            "image_url",
         ]
 
 
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = ["id", "name", "description", "price", "market", "seller"]
+        fields = [
+            "id",
+            "name",
+            "description",
+            "price",
+            "market",
+            "seller",
+            "image_url",
+        ]
 
 
 class ProductHyperlinkedModelSerializer(
@@ -81,4 +106,13 @@ class ProductHyperlinkedModelSerializer(
 ):
     class Meta:  # type: ignore
         model = Product
-        fields = ["id", "url", "name", "description", "price", "market", "seller"]
+        fields = [
+            "id",
+            "url",
+            "name",
+            "description",
+            "price",
+            "market",
+            "seller",
+            "image_url",
+        ]

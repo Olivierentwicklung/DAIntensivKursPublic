@@ -33,7 +33,7 @@ In this exercise, i build a full-stack application to manage:
    In Terminal: python manage.py seed_market_app
   ```
 
-- Send GET and POST requests through the API endpoint
+- Send GET, POST, PUT, PATCH and DELETE requests through the API endpoint
 
   ```bash
   external frontend: http://127.0.0.1:8000/api/

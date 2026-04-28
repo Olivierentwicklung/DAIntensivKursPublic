@@ -117,7 +117,7 @@ Provides all **Class Models**.
 
 ### 🔹 Staff Filter App (Django Templates)
 
-In this exercise, you create filters in a Django app to display employee data based on specific criteria.
+In this exercise, i create filters in a Django app to display employee data based on specific criteria.
 
 **Key concepts:**
 
@@ -130,6 +130,28 @@ In this exercise, you create filters in a Django app to display employee data ba
 ![Demo](z_screenshots/staff_filter_app.png)
 
 ➡️ [View detailed README](employees_app/README_employees_app.md)
+
+---
+
+### 🔹 Market Management Application
+
+In this exercise, i build a full-stack application to manage:
+
+- Markets
+- Sellers
+- Products
+
+**Key concepts:**
+
+- Backend: Django + Django REST Framework
+  - Testing: Postman + DRF API Browser
+- Frontend: Angular
+
+**🎥 Demo:**
+
+![Demo](z_screenshots/market_app/backend/img_1.png)
+
+➡️ [View detailed README](market_app/README_market_app.md)
 
 ---
 

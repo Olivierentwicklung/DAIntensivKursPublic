@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -49,6 +50,8 @@ INSTALLED_APPS = [
     "university_system_app",
     "employees_app",
     "market_app",
+    "Event_Booking_System.events.apps.EventsConfig",
+    "Event_Booking_System.bookings.apps.BookingsConfig",
 ]
 
 MIDDLEWARE = [
@@ -145,3 +148,8 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+JAZZMIN_SETTINGS = {
+    "topmenu_links": [{"app": "bookings"}, {"app": "events"}],
+    "copyright": "Olivier Lowe",
+}

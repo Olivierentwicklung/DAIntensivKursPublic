@@ -130,7 +130,7 @@ In this exercise, we’ll focus on understanding and customizing the Django admi
 
 ![Demo](z_screenshots/event_booking_system/img_1.png)
 
-➡️ [View detailed README](Event_Booking_System/README_event_booking_system.md)
+➡️ [View detailed README](event_booking_system/README_event_booking_system.md)
 
 ---
 

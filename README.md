@@ -115,7 +115,7 @@ Provides all **Class Models**.
 
 ---
 
-### 🔹 Django Admin (Event_Booking_System)
+### 🔹 Django Admin (Event Booking System)
 
 In this exercise, we’ll focus on understanding and customizing the Django admin panel for an event booking system.
 

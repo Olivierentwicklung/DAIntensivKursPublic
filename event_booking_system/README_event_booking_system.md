@@ -1,4 +1,4 @@
-# 🚀 Django Admin (Event_Booking_System)
+# 🚀 Django Admin (Event Booking System)
 
 In this exercise, we’ll focus on understanding and customizing the Django admin panel for an event booking system.
 
@@ -65,4 +65,4 @@ In this exercise, we’ll focus on understanding and customizing the Django admi
 
 ---
 
-➡️ [View Main README](/README.md#-django-admin-event_booking_system)
+➡️ [View Main README](/README.md#-django-admin-event-booking-system)

@@ -7,6 +7,10 @@ from .models import Event, EventCategory, Location
 
 class EventAdmin(admin.ModelAdmin):
     list_display = ["title", "category", "location", "date"]
+    search_fields = ["title", "date"]
+    list_filter = [
+        "category",
+    ]
 
 
 admin.site.register(EventCategory)

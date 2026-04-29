@@ -26,6 +26,7 @@ class EventAdmin(admin.ModelAdmin):
             },
         ),
     ]
+    date_hierarchy = "date"
 
 
 admin.site.register(EventCategory)

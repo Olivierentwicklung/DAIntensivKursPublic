@@ -11,5 +11,10 @@ class BookingAdmin(admin.ModelAdmin):
     readonly_fields = ["booking_date"]
 
 
-admin.site.register(Participant)
+class ParticipantAdmin(admin.ModelAdmin):
+    list_display = ["first_name", "last_name", "email"]
+    prepopulated_fields = {"full_name": ["first_name", "last_name"]}
+
+
+admin.site.register(Participant, ParticipantAdmin)
 admin.site.register(Booking, BookingAdmin)

@@ -5,9 +5,9 @@ from Event_Booking_System.events.models import Event
 
 
 class Participant(models.Model):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    email = models.EmailField(unique=True)
+    first_name = models.CharField(max_length=100, help_text="max 100 letters allows")
+    last_name = models.CharField(max_length=100, help_text="max 100 letters allows")
+    email = models.EmailField(unique=True, help_text="email muss be unique")
     full_name = models.SlugField(blank=True)
 
     def __str__(self):

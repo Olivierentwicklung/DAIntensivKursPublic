@@ -11,6 +11,21 @@ class EventAdmin(admin.ModelAdmin):
     list_filter = [
         "category",
     ]
+    fieldsets = [
+        (
+            "Allgemein",
+            {
+                "fields": ["title", "category", "date"],
+            },
+        ),
+        (
+            "Organisation",
+            {
+                "classes": ["collapse"],
+                "fields": ["location", "capacity"],
+            },
+        ),
+    ]
 
 
 admin.site.register(EventCategory)

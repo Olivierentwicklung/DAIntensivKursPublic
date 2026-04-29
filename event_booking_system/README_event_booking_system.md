@@ -54,7 +54,7 @@ In this exercise, we’ll focus on understanding and customizing the Django admi
 
 **🎥 Demo:**
 
-![Demo](../z_screenshots/event_booking_system/img_1.png)
+![Demo](../z_screenshots/Event_Booking_System/img_1.png)
 
 ---
 

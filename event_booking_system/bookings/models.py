@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-from events.models import Event
+from Event_Booking_System.events.models import Event
 
 
 class Participant(models.Model):

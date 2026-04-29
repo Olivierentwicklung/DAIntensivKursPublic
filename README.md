@@ -121,10 +121,10 @@ In this exercise, we’ll focus on understanding and customizing the Django admi
 
 **Key concepts:**
 
-- Django Admin Dashboard
 - Registering models in the admin
 - adding filter functions
 - Arranging fields, and other admin customizations
+- Customizing Django Admin Dashboard With Jazzmin
 
 **🎥 Demo:**
 

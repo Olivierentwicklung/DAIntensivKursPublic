@@ -115,6 +115,25 @@ Provides all **Class Models**.
 
 ---
 
+### 🔹 Django Admin - Event_Booking_System
+
+In this exercise, we’ll focus on understanding and customizing the Django admin panel for an event booking system.
+
+**Key concepts:**
+
+- Django Admin Dashboard
+- Registering models in the admin
+- adding filter functions
+- Arranging fields, and other admin customizations
+
+**🎥 Demo:**
+
+![Demo](z_screenshots/event_booking_system/img_1.png)
+
+➡️ [View detailed README](Event_Booking_System/README_event_booking_system.md)
+
+---
+
 ### 🔹 Staff Filter App (Django Templates)
 
 In this exercise, i create filters in a Django app to display employee data based on specific criteria.

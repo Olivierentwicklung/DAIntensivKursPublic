@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     "university_system_app",
     "employees_app",
     "market_app",
+    "Event_Booking_System.bookings.bookings",
+    " Event_Booking_System.bookings.events",
 ]
 
 MIDDLEWARE = [
